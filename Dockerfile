@@ -1,5 +1,4 @@
 #
-
 FROM golang:1.4
 MAINTAINER Bradley Cicenas <bradley.cicenas@gmail.com>
 
@@ -13,6 +12,8 @@ RUN mkdir /etcd && \
 
 #install discovery web service
 RUN go get -v github.com/coreos/discovery.etcd.io
+
+ADD run.sh /run.sh
 
 EXPOSE 8087
 
